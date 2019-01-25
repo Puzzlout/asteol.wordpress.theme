@@ -2,14 +2,50 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 200px;
+    width: 225px;
     border-bottom: 0;
     border-top: 0;
     border-right: 1px solid #eee;
     padding-top: 75px;
 }
 
+li.menu-item-has-children {
+}
+
+li.menu-item-has-children::before {
+    border-style: unset !important;
+}
+
+li.menu-item-has-children::after {
+    border-style: unset !important;
+}
+
 .main-navigation ul ul {
     position: static;
-    //border: none;
+    border: none;
+    margin-left: 20px;
+    background: transparent;
+}
+
+.main-navigation li li:hover,
+.main-navigation li li.focus {
+    background: transparent;
+}
+
+.main-navigation li li.current-menu-item a:hover,
+.main-navigation li li.current_page_item a:focus,
+.main-navigation li li.current-menu-item a:focus {
+    color: #767676;
+}
+
+.main-navigation li li.focus > a,
+.main-navigation li li:focus > a,
+.main-navigation li li:hover > a,
+.main-navigation li li a:hover,
+.main-navigation li li a:focus,
+.main-navigation li li.current_page_item a:hover,
+.main-navigation li li.current-menu-item a:hover,
+.main-navigation li li.current_page_item a:focus,
+.main-navigation li li.current-menu-item a:focus {
+    color: #767676;
 }

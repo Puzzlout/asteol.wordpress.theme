@@ -30,14 +30,6 @@
 
 		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
-
 	</header><!-- #masthead -->
 
 	<?php
@@ -52,6 +44,14 @@
 		echo '</div><!-- .single-featured-image-header -->';
 	endif;
 	?>
+
+	<?php if ( has_nav_menu( 'top' ) ) : ?>
+		<div class="navigation-top">
+			<div class="wrap">
+				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+			</div><!-- .wrap -->
+		</div><!-- .navigation-top -->
+	<?php endif; ?>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">

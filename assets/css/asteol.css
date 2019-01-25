@@ -1,0 +1,15 @@
+.navigation-top {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 1px solid #eee;
+    padding-top: 75px;
+}
+
+.main-navigation ul ul {
+    position: static;
+    //border: none;
+}

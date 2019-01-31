@@ -39,6 +39,7 @@
 		<?php endif; ?>
 
 	</header><!-- #masthead -->
+
 	<?php
 
 	/*

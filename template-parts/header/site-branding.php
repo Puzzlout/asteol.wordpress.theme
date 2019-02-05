@@ -36,3 +36,7 @@
 
 	</div><!-- .wrap -->
 </div><!-- .site-branding -->
+<div class="main-searchbox searchbox-standalone">
+	<?php get_search_form(); ?>
+</div>
+

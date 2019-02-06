@@ -7,6 +7,7 @@
     border-top: 0;
     border-right: 1px solid #eee;
     padding-top: 75px;
+    display: none;
 }
 
 li.menu-item-has-children {
@@ -68,4 +69,38 @@ li.menu-item-has-children::after {
     opacity: 1;
     transition: max-height 1s, opacity 1s;
     transition-timing-function: ease-in-out;
+}
+
+.menu-toggle {
+    position: absolute;
+    opacity: 1;
+    display: block !important;
+    background-color: #fff;
+    z-index: 99;
+    border: 1px solid gray;
+}
+
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navigation-top {
+        display: block;
+    }
+
+    .menu-toggle {
+        //display: none;
+    }
 }

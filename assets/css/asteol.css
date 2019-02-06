@@ -49,3 +49,23 @@ li.menu-item-has-children::after {
 .main-navigation li li.current-menu-item a:focus {
     color: #767676;
 }
+
+#top-menu > li {
+    display: block;
+}
+
+.sub-menu {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.25s ease-in-out;
+}
+
+#top-menu > li:hover > .sub-menu {
+    visibility: visible;
+    height: auto;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 1s, opacity 1s;
+    transition-timing-function: ease-in-out;
+}

@@ -106,4 +106,16 @@
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
 	})();
+
+
+	$('.menu-toggle').click(function(){
+		$(this).attr('style','display:none !important');
+		$('.navigation-top').show();
+	});
+
+	$('.menu-close').click(function(){
+		$('.menu-toggle').attr('style','display:block');
+		$('.navigation-top').hide();
+	});
+
 })( jQuery );

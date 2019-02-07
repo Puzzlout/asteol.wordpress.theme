@@ -46,8 +46,21 @@
 	?>
 
 	<?php if ( has_nav_menu( 'top' ) ) : ?>
+		<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
+			<?php
+			echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
+			//echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+			_e( '', 'twentyseventeen' );
+			?>
+		</button>
 		<div class="navigation-top">
 			<div class="wrap">
+                <button class="menu-close" aria-controls="top-menu">
+                    <?php
+                    echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+                    _e( '', 'twentyseventeen' );
+                    ?>   
+                </button>
 				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 			</div><!-- .wrap -->
 		</div><!-- .navigation-top -->

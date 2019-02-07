@@ -23,7 +23,4 @@
 	<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
 		<a href="#content" class="menu-scroll-down"><?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'twentyseventeen' ); ?></span></a>
 	<?php endif; ?>
-	<div class="main-searchbox searchbox-menu">
-		<?php get_search_form(); ?>
-	</div>
 </nav><!-- #site-navigation -->

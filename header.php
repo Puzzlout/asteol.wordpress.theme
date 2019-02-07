@@ -62,6 +62,9 @@
                     ?>   
                 </button>
 				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+                <div class="main-searchbox searchbox-menu">
+                    <?php get_search_form(); ?>
+                </div>
 			</div><!-- .wrap -->
 		</div><!-- .navigation-top -->
 	<?php endif; ?>

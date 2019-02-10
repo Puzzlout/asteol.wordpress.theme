@@ -30,14 +30,6 @@
 
 		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
-
 	</header><!-- #masthead -->
 
 	<?php
@@ -52,6 +44,30 @@
 		echo '</div><!-- .single-featured-image-header -->';
 	endif;
 	?>
+
+	<?php if ( has_nav_menu( 'top' ) ) : ?>
+		<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
+			<?php
+			echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
+			//echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+			_e( '', 'twentyseventeen' );
+			?>
+		</button>
+		<div class="navigation-top">
+			<div class="wrap">
+                <button class="menu-close" aria-controls="top-menu">
+                    <?php
+                    echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+                    _e( '', 'twentyseventeen' );
+                    ?>   
+                </button>
+				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+                <div class="main-searchbox searchbox-menu">
+                    <?php get_search_form(); ?>
+                </div>
+			</div><!-- .wrap -->
+		</div><!-- .navigation-top -->
+	<?php endif; ?>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">

@@ -1,3 +1,35 @@
+/*--------------------------------------------------------------
+13.0 Layout
+--------------------------------------------------------------*/
+.site {
+	height: 100%;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+	grid-template-areas: 
+	"m m h h h h h h h h h h" 
+	"m m h h h h h h h h h h" 
+	"m m c c c c c c c c c c";
+}
+/*--------------------------------------------------------------
+13.1 Header
+--------------------------------------------------------------*/
+header {
+	grid-area: h;
+}
+
+/*--------------------------------------------------------------
+13.3 Regular Content
+--------------------------------------------------------------*/
+.site-content-contain {
+	background-color: #fff;
+	grid-area: c;
+}
+
+/*--------------------------------------------------------------
+12.0 Navigation
+--------------------------------------------------------------*/
+
 .navigation-top {
     position: fixed;
     top: 0;
@@ -81,17 +113,14 @@ li.menu-item-has-children::after {
 }
 
 .menu-toggle {
-    position: absolute;
+    position: fixed;
     opacity: 1;
-    display: block !important;
     background-color: #fff;
     z-index: 99;
-    border: 1px solid #666;
-    left: 0;
+    border: 1px solid #bbb;
     border-left: none;
-    padding: 0.7em 0.9em;
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .menu-toggle .icon {
@@ -109,6 +138,25 @@ li.menu-item-has-children::after {
     width: 70%;
 }
 
+/*--------------------------------------------------------------
+15.0 Widgets
+--------------------------------------------------------------*/
+
+.main-searchbox {
+	width: 50vmax;
+	margin: 1em auto;
+	flex:1;
+}
+.main-searchbox .search-form {
+	display: flex;
+}
+.main-searchbox .search-submit {
+	position: initial;
+}
+
+/*--------------------------------------------------------------
+19.0 Media Queries
+--------------------------------------------------------------*/
 @media (max-width: 576px) {
     .navigation-top {
         width: 100%
@@ -131,16 +179,39 @@ li.menu-item-has-children::after {
     }
     .main-searchbox .search-submit {
         position: absolute;
+        margin-bottom: 1em;
     }
 }
-
-/* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-
+@media screen and (min-width: 20em) {
+	.main-navigation {
+		display: flex;
+	}
+	.searchbox-menu {
+		width: max-content;
+		margin: 0;
+	}
+	.searchbox-standalone { 
+		/* display: none; */
+	}
 }
+@media screen and (max-width: 48em) {
+    
+    .menu-toggle {
+        position: inherit;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+    }
+}
+@media screen and ( min-width: 75em ) {
+	.site {
+	    display: grid;
+	}
+	/* Main Navigation */
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 993px) and (max-width: 1199px) {
+	.js .menu-toggle,
+	.js .dropdown-toggle {
+		display: none;
+	}
 
 }
 

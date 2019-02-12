@@ -1548,23 +1548,9 @@ body {
 	display: block;
 }
 
-.site {
-	height: 100%;
-    grid-gap: 3px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
-	grid-template-areas: 
-	"m m h h h h h h h h h h" 
-	"m m c c c c c c c c c c" 
-	"f f f f f f f f f f f f";
-}
 /*--------------------------------------------------------------
 13.1 Header
 --------------------------------------------------------------*/
-header {
-	grid-area: h;
-}
-
 #masthead .wrap {
 	position: relative;
 }
@@ -1882,12 +1868,6 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 /*--------------------------------------------------------------
 13.3 Regular Content
 --------------------------------------------------------------*/
-
-.site-content-contain {
-	background-color: #fff;
-	grid-area: c;
-}
-
 .site-content {
 	padding: 2.5em 0 0;
 }
@@ -2768,19 +2748,6 @@ h2.widget-title {
 	width: 24px;
 }
 
-
-.main-searchbox {
-	width: 50vmax;
-	margin: 1em auto;
-	flex:1;
-}
-.main-searchbox .search-form {
-	display: flex;
-}
-.main-searchbox .search-submit {
-	position: initial;
-}
-
 /* Tag cloud widget */
 
 .tagcloud ul li {
@@ -3250,17 +3217,6 @@ p > object:only-child {
 	body.customize-partial-edit-shortcuts-shown .site-header .site-title {
 		padding-left: 0;
 	}
-
-	.main-navigation {
-		display: flex;
-	}
-	.searchbox-menu {
-		width: max-content;
-		margin: 0;
-	}
-	.searchbox-standalone { 
-		/* display: none; */
-	}
 }
 
 @media screen and (min-width: 30em) {
@@ -3544,13 +3500,6 @@ p > object:only-child {
 
 	.admin-bar .site-navigation-fixed.navigation-top {
 		top: 32px;
-	}
-
-	/* Main Navigation */
-
-	.js .menu-toggle,
-	.js .dropdown-toggle {
-		display: none;
 	}
 
 	.main-navigation {
@@ -4180,13 +4129,6 @@ p > object:only-child {
 	.comment-body {
 		margin-left: 0;
 	}
-}
-
-@media screen and ( min-width: 75em ) {
-	.site {
-	    display: grid;
-	}
-
 }
 
 @media screen and ( min-width: 79em ) {

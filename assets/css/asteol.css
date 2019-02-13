@@ -157,7 +157,7 @@ li.menu-item-has-children::after {
 /*--------------------------------------------------------------
 19.0 Media Queries
 --------------------------------------------------------------*/
-@media (max-width: 576px) {
+@media (max-width: 20em) {
     .navigation-top {
         width: 100%
     }
@@ -172,16 +172,6 @@ li.menu-item-has-children::after {
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-    .main-searchbox {
-        margin: 0 auto;
-    }
-    .main-searchbox .search-submit {
-        position: absolute;
-        margin-bottom: 1em;
-    }
-}
 @media screen and (min-width: 20em) {
 	.main-navigation {
 		display: flex;
@@ -190,12 +180,27 @@ li.menu-item-has-children::after {
 		width: max-content;
 		margin: 0;
 	}
-	.searchbox-standalone { 
-		/* display: none; */
-	}
 }
+@media screen and (min-width: 30em) {
+    .site-branding {
+        padding: 2em 0;
+    }
+
+    .panel-content .wrap {
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+}
+
 @media screen and (max-width: 48em) {
-    
+    body:not(.title-tagline-hidden) .site-branding-text {
+        display: block;
+        text-align: center;
+    }
+    .site-description {
+        display: none;
+    }
+
     .menu-toggle {
         position: inherit;
         border: 1px solid #bbb;

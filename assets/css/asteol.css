@@ -38,7 +38,6 @@ header {
     border-bottom: 0;
     border-top: 0;
     border-right: 1px solid #eee;
-    padding-top: 75px;
     display: none;
     z-index: 3;
 }
@@ -128,10 +127,12 @@ li.menu-item-has-children::after {
 }
 
 .menu-close {
-    padding: 0.25em 0.5em;
-    position: absolute;
-    right: 1em;
-    top: 1em;
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    float: right;
+    border-radius: 2em;
+    line-height: initial;
 }
 
 .main-searchbox {
@@ -158,10 +159,6 @@ li.menu-item-has-children::after {
 19.0 Media Queries
 --------------------------------------------------------------*/
 @media (max-width: 20em) {
-    .navigation-top {
-        width: 100%
-    }
-
     .main-searchbox {
         margin: 0 auto;
         display: block;
@@ -199,6 +196,10 @@ li.menu-item-has-children::after {
     }
     .site-description {
         display: none;
+    }
+
+    .navigation-top {
+        width: 100%
     }
 
     .menu-toggle {

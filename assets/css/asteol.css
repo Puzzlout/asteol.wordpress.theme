@@ -1,11 +1,30 @@
 /*--------------------------------------------------------------
+7.0 Formatting
+--------------------------------------------------------------*/
+.site-header,
+.navigation-top,
+.main-navigation ul,
+.site-content-contain,
+.panel-content,
+.site-footer {
+    background-color: #FFFF9F;
+}
+
+.main-navigation a {
+    padding: 0.5em;
+}
+
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+    color: #fff;
+    background-color: #171700;
+}
+/*--------------------------------------------------------------
 13.0 Layout
 --------------------------------------------------------------*/
 .site {
 	height: 100%;
-    grid-gap: 3px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
 	grid-template-areas: 
 	"m m h h h h h h h h h h" 
 	"m m h h h h h h h h h h" 
@@ -18,11 +37,14 @@ header {
 	grid-area: h;
 }
 
+.site-header {
+    border-bottom: 4px solid #FFFF00;
+}
+
 /*--------------------------------------------------------------
 13.3 Regular Content
 --------------------------------------------------------------*/
 .site-content-contain {
-	background-color: #fff;
 	grid-area: c;
 }
 
@@ -34,10 +56,10 @@ header {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 250px;
+    width: 280px;
     border-bottom: 0;
     border-top: 0;
-    border-right: 1px solid #eee;
+    border-right: 4px solid #FFFF00;
     display: none;
     z-index: 3;
 }
@@ -63,12 +85,6 @@ li.menu-item-has-children::after {
 .main-navigation li li:hover,
 .main-navigation li li.focus {
     background: transparent;
-}
-
-.main-navigation li li.current-menu-item a:hover,
-.main-navigation li li.current_page_item a:focus,
-.main-navigation li li.current-menu-item a:focus {
-    color: #767676;
 }
 
 .main-navigation li li.focus > a,
@@ -114,9 +130,10 @@ li.menu-item-has-children::after {
 .menu-toggle {
     position: fixed;
     opacity: 1;
-    background-color: #fff;
+    background-color: #171700;
+    color: #fff;
     z-index: 99;
-    border: 1px solid #bbb;
+    border: 1px solid #FFFF00;
     border-left: none;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
@@ -204,10 +221,19 @@ li.menu-item-has-children::after {
 
     .menu-toggle {
         position: inherit;
-        border: 1px solid #bbb;
+        border: 1px solid #FFFF00;
         border-radius: 4px;
     }
+
 }
+
+@media screen and ( min-width: 48em ) {
+    .main-navigation ul ul a {
+        padding: 0.75em 1.25em;
+        width: initial;
+    }
+}
+
 @media screen and ( min-width: 75em ) {
 	.site {
 	    display: grid;

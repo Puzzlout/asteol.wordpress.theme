@@ -39,6 +39,9 @@ header {
 
 .site-header {
     border-bottom: 4px solid #FFFF00;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
 }
 
 /*--------------------------------------------------------------
@@ -176,6 +179,7 @@ li.menu-item-has-children::after {
 19.0 Media Queries
 --------------------------------------------------------------*/
 @media (max-width: 20em) {
+
     .main-searchbox {
         margin: 0 auto;
         display: block;
@@ -187,6 +191,11 @@ li.menu-item-has-children::after {
 }
 
 @media screen and (min-width: 20em) {
+
+    .site-header + .site-content-contain {
+        padding-top: 12em;
+    }
+
 	.main-navigation {
 		display: flex;
 	}
@@ -196,6 +205,9 @@ li.menu-item-has-children::after {
 	}
 }
 @media screen and (min-width: 30em) {
+    .site-header + .site-content-contain {
+        padding-top: 10em;
+    }
     .site-branding {
         padding: 2em 0;
     }
@@ -207,6 +219,7 @@ li.menu-item-has-children::after {
 }
 
 @media screen and (max-width: 48em) {
+
     body:not(.title-tagline-hidden) .site-branding-text {
         display: block;
         text-align: center;
@@ -228,6 +241,10 @@ li.menu-item-has-children::after {
 }
 
 @media screen and ( min-width: 48em ) {
+    .site-header {
+        position: initial;
+        width: initial;
+    }
     .main-navigation ul ul a {
         padding: 0.75em 1.25em;
         width: initial;

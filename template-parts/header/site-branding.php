@@ -45,7 +45,6 @@
 				?>
 			</button>
 			<div class="navigation-top">
-				<div class="wrap">
 					<button class="menu-close" aria-controls="top-menu">
 						<?php
 						echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
@@ -53,7 +52,6 @@
 						?>   
 					</button>
 					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
 			</div><!-- .navigation-top -->
 	<?php endif; ?>
 	<div class="main-searchbox searchbox-standalone">

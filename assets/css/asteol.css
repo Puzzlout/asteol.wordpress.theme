@@ -142,7 +142,7 @@ li.menu-item-has-children::after {
     transition: max-height 0.25s ease-in-out;
 }
 .menu-item-has-children > button {
-    display: none;
+    /* display: none; */
 }
 
 #top-menu > li:hover > .sub-menu {

@@ -163,9 +163,8 @@ li.menu-item-has-children::after {
 --------------------------------------------------------------*/
 
 .main-searchbox {
-	width: 50vmax;
+	width: 80vmax;
 	margin: 1em auto;
-	flex:1;
 }
 .main-searchbox .search-form {
 	display: flex;
@@ -194,10 +193,20 @@ li.menu-item-has-children::after {
     .site-header + .site-content-contain {
         padding-top: 12em;
     }
+    .custom-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
 	.main-navigation {
 		display: flex;
-	}
+    }
+    
+    .js .menu-toggle {
+        position: absolute;
+        right: 0;
+        margin: 1em;
+    }
 	.searchbox-menu {
 		width: max-content;
 		margin: 0;
@@ -208,13 +217,18 @@ li.menu-item-has-children::after {
         padding-top: 10em;
     }
     .site-branding {
-        padding: 2em 0;
+        padding: 1em 0;
     }
 
     .panel-content .wrap {
         padding-bottom: 2em;
         padding-top: 1em;
     }
+
+    .panel-content .entry-header {
+        margin-bottom: 2.5em;
+    }
+
 }
 
 @media screen and (max-width: 48em) {
@@ -229,13 +243,12 @@ li.menu-item-has-children::after {
     .navigation-top {
         width: 100%
     }
-
     .menu-toggle {
+        display: block;
         position: inherit;
         border: 1px solid #FFFF00;
         border-radius: 4px;
     }
-
 }
 
 @media screen and ( min-width: 48em ) {
@@ -250,7 +263,19 @@ li.menu-item-has-children::after {
     .site-header + .site-content-contain {
         padding-top: 0em;
     }
-
+    .custom-header {
+        display: initial;
+    }
+    .js .menu-toggle {
+        position: fixed;
+        top: 8.25em;
+        left: 0;
+        margin: initial;
+    }
+    .main-searchbox {
+        width: 50vmax;
+        margin: 1em auto;
+    }
 }
 
 @media screen and ( min-width: 75em ) {

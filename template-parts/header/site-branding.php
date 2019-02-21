@@ -36,7 +36,6 @@
 
 	</div><!-- .wrap -->
 </div><!-- .site-branding -->
-<div class="header-toolset">
 	<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Menu
 				<?php
@@ -60,5 +59,3 @@
 	<div class="main-searchbox searchbox-standalone">
 		<?php get_search_form(); ?>
 	</div>
-</div>
-

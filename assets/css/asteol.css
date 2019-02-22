@@ -8,32 +8,42 @@ p {
 7.0 Formatting
 --------------------------------------------------------------*/
 .site-header,
-.navigation-top,
-.main-navigation ul,
 .site-content-contain,
 .panel-content,
 .site-footer {
     background-color: #FFFF9F;
 }
 
-.main-navigation a {
-    padding: 2em 1em;
+.menu-item a {
+    color: #FFFF9F;
 }
-.current-menu-item a {
-    border: 0.25em solid #FFFF00;
-}
-.main-navigation a:hover,
-.sub-menu a:hover {
-    padding: 1em;
-    border: 0.25em solid #171700;
+
+.main-navigation li a:hover,
+.sub-menu li a:hover {
+    background-color: #FFFF00;
     color: #171700;
     font-size: larger;
 }
+.main-navigation a:hover {
+    color: #171700;
+}
 
-.navigation-top .current-menu-item > a,
-.navigation-top .current_page_item > a {
-    color: #fff;
-    background-color: #171700;
+.main-navigation .current-menu-item,
+.main-navigation .current_page_item {
+    background-color: #FFFF9F;
+}
+.main-navigation .current-menu-item a,
+.main-navigation .current_page_item a {
+    color: #171700;
+}
+.main-navigation .current-menu-item a:hover,
+.main-navigation .current_page_item a:hover {
+    color: #171700;
+}
+
+.menu-close {
+    color: #171700;
+    background-color: #FFFF9F;
 }
 /*--------------------------------------------------------------
 13.0 Layout
@@ -53,7 +63,6 @@ header {
 }
 
 .site-header {
-    border-bottom: 4px solid #FFFF00;
     position: fixed;
     width: 100%;
     z-index: 50;
@@ -84,9 +93,9 @@ header {
     width: 100%;
     border-bottom: 0;
     border-top: 0;
-    border-right: 4px solid #FFFF00;
     display: none;
     z-index: 3;
+    background-color: #171700;
 }
 
 li.menu-item-has-children {
@@ -118,7 +127,7 @@ li.menu-item-has-children::after {
 .main-navigation li li.current-menu-item a:hover,
 .main-navigation li li.current_page_item a:focus,
 .main-navigation li li.current-menu-item a:focus {
-    color: #FFFF00;
+    color: #f00;
 }
 
 #top-menu {
@@ -139,10 +148,7 @@ li.menu-item-has-children::after {
     visibility: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.25s ease-in-out;
-}
-.menu-item-has-children > button {
-    /* display: none; */
+    /*transition: max-height 0.25s ease-in-out;*/
 }
 
 #top-menu > li:hover > .sub-menu {
@@ -150,8 +156,8 @@ li.menu-item-has-children::after {
     height: auto;
     max-height: 500px;
     opacity: 1;
-    transition: max-height 1s, opacity 1s;
-    transition-timing-function: ease-in-out;
+    /*transition: max-height 1s, opacity 1s;
+    transition-timing-function: ease-in-out;*/
 }
 
 .menu-menu-principal-container {
@@ -293,7 +299,6 @@ li.menu-item-has-children::after {
         width: initial;
     }
     .main-navigation ul ul a {
-        padding: 0.75em 1.25em;
         width: initial;
     }
     .site-header + .site-content-contain {

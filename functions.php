@@ -457,7 +457,7 @@ function twentyseventeen_scripts() {
 	}
 
 	//Asteol custom styles
-	wp_enqueue_style( 'twentyseventeen-asteol-custom-style', get_theme_file_uri( '/assets/css/asteol.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	wp_enqueue_style( 'twentyseventeen-asteol-custom-style', get_theme_file_uri( '/assets/css/asteol.300e62b.css' ), array( 'twentyseventeen-style' ), '1.0' );
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {

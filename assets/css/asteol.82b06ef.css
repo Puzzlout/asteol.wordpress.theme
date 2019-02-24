@@ -78,8 +78,9 @@ header {
 .main-navigation .menu-item > a {
     color: #FFFF9F;
 }
+.main-navigation .current-menu-item .sub-menu,
 .main-navigation .current-menu-item .sub-menu .menu-item > a {
-    color: #171700;
+    background-color: #171700;
 }
 
 .main-navigation li a:hover,
@@ -127,7 +128,7 @@ li.menu-item-has-children::after {
 .main-navigation ul ul {
     position: static;
     border: none;
-    margin-left: 20px;
+    padding-left: 20px;
     background: transparent;
 }
 
@@ -168,6 +169,9 @@ li.menu-item-has-children::after {
     float: right;
     border-radius: 2em;
     line-height: initial;
+}
+.menu-close:hover {
+    background-color: #FFFF00;
 }
 
 .dropdown-toggle {
@@ -265,6 +269,10 @@ li.menu-item-has-children::after {
     .navigation-top {
         width: 100%
     }
+    .main-navigation .menu li {
+        margin: 1em;
+    }
+
     .menu-toggle {
         display: block;
         position: inherit;
@@ -285,6 +293,11 @@ li.menu-item-has-children::after {
         position: initial;
         width: initial;
     }
+
+    .navigation-top nav {
+        margin-left: 0;
+    }
+
     .main-navigation ul ul a {
         width: initial;
     }

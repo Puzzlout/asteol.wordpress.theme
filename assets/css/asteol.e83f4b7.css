@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 p {
     text-align: justify;
+    color: #171700;
 }
 /*--------------------------------------------------------------
 7.0 Formatting
@@ -14,6 +15,22 @@ p {
     background-color: #FFFF9F;
 }
 
+a:hover.more-link,
+.link-more a:focus, 
+.link-more a:hover {
+    font-size: larger;
+    color: #ffff00;
+}
+
+.entry-content .more-link:before {
+    display: none;
+}
+a.more-link,
+.link-more a {
+    padding: 1em;
+    background-color: #171700;
+    color: #ffff9f;
+}
 /*--------------------------------------------------------------
 13.0 Layout
 --------------------------------------------------------------*/
@@ -337,4 +354,17 @@ li.menu-item-has-children::after {
 		display: none;
 	}
 
+    /*.single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary
+    {
+        max-width: 1200px;
+    }
+    .site-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    
+    article {
+        padding: 3em;
+    }*/
 }

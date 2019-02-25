@@ -101,11 +101,14 @@ header {
 }
 
 .main-navigation li a:hover,
+.main-navigation li a:focus,
+.sub-menu li a:focus,
 .sub-menu li a:hover {
     background-color: #FFFF00;
     color: #171700;
     font-size: larger;
 }
+.main-navigation a:focus,
 .main-navigation a:hover {
     color: #171700;
 }
@@ -120,8 +123,11 @@ header {
 .main-navigation .sub-menu .current-menu-item > a {
     color: #171700;
 }
+.main-navigation .current-menu-item > a:focus,
+.main-navigation .current_page_item > a:focus,
 .main-navigation .current-menu-item > a:hover,
 .main-navigation .current_page_item > a:hover,
+.main-navigation .sub-menu .current-menu-item > a:focus,
 .main-navigation .sub-menu .current-menu-item > a:hover {
     color: #171700;
 }

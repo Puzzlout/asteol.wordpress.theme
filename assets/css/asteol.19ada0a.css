@@ -361,26 +361,8 @@ li.menu-item-has-children::after {
         width: 50vmax;
         margin: 1em auto;
     }
-
 }
-
-@media screen and ( min-width: 75em ) {
-	.site {
-	    display: grid;
-	}
-	/* Main Navigation */
-    .navigation-top {
-        display: block;
-        width: 20%;
-        width: 20vw;
-    }
-
-    .menu-close,
-	.js .menu-toggle,
-	.js .dropdown-toggle {
-		display: none;
-	}
-
+@media screen and ( min-width: 64em ) {
     .page-archive .site-main,
     .page-search .site-main {
         display: grid;
@@ -405,4 +387,23 @@ li.menu-item-has-children::after {
     .page-search article {
         margin-bottom: initial;
     }
+
+}
+
+@media screen and ( min-width: 75em ) {
+	.site {
+	    display: grid;
+	}
+	/* Main Navigation */
+    .navigation-top {
+        display: block;
+        width: 20%;
+        width: 20vw;
+    }
+
+    .menu-close,
+	.js .menu-toggle,
+	.js .dropdown-toggle {
+		display: none;
+	}
 }

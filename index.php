@@ -28,7 +28,7 @@ get_header(); ?>
 	</header>
 	<?php endif; ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-index">
 		<main id="main" class="site-main" role="main">
 
 			<?php

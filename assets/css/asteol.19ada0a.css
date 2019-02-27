@@ -1,3 +1,8 @@
+.logged-in .site,
+.logged-in .navigation-top {
+    margin-top: 2em;/*The height of the admin bar*/
+}
+
 /*--------------------------------------------------------------
 5.0 Typography
 --------------------------------------------------------------*/
@@ -8,6 +13,7 @@ p {
 /*--------------------------------------------------------------
 7.0 Formatting
 --------------------------------------------------------------*/
+body,
 .site-header,
 .site-content-contain,
 .panel-content,
@@ -29,7 +35,7 @@ a.more-link,
 .link-more a {
     padding: 1em;
     background-color: #171700;
-    color: #ffff9f;
+    color: #ffffff;
 }
 /*--------------------------------------------------------------
 13.0 Layout
@@ -206,6 +212,21 @@ li.menu-item-has-children::after {
 .main-searchbox {
     width: 70%;
 }
+/*--------------------------------------------------------------
+13.4 Posts
+--------------------------------------------------------------*/
+
+.page-header span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.page-search article,
+.page-archive article {
+    background-color: #fbfb74;
+    padding: 2em;
+    margin-bottom: 3em;
+}
 
 /*--------------------------------------------------------------
 15.0 Widgets
@@ -360,17 +381,28 @@ li.menu-item-has-children::after {
 		display: none;
 	}
 
-    /*.single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary
-    {
-        max-width: 1200px;
-    }
-    .site-main {
+    .page-archive .site-main,
+    .page-search .site-main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1em;
+        grid-gap: 3em;
     }
-    
-    article {
-        padding: 3em;
-    }*/
+
+    .page-archive,
+    .page-search .site-main {
+        width: initial;
+        max-width: initial;
+    }
+
+    body:not(.has-sidebar):not(.page-one-column) .page-header,
+    .page-search .page-header {
+        display: block;
+        float: initial;
+        width: initial;
+    }
+
+    .page-archive article,
+    .page-search article {
+        margin-bottom: initial;
+    }
 }

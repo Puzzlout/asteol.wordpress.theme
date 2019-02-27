@@ -13,16 +13,14 @@
 get_header(); ?>
 
 <div class="wrap">
-
-	<header class="page-header">
-		<?php if ( have_posts() ) : ?>
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyseventeen' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		<?php else : ?>
-			<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyseventeen' ); ?></h1>
-		<?php endif; ?>
-	</header><!-- .page-header -->
-
-	<div id="primary" class="content-area">
+	<div class="content-area page-search">
+		<header class="page-header">
+			<?php if ( have_posts() ) : ?>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyseventeen' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<?php else : ?>
+				<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyseventeen' ); ?></h1>
+			<?php endif; ?>
+		</header><!-- .page-header -->
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -36,7 +34,7 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/post/content', 'excerpt' );
+				get_template_part( 'template-parts/post/content', get_post_format() );
 
 			endwhile; // End of the loop.
 

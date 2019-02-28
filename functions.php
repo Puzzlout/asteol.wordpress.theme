@@ -665,3 +665,14 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Add non CSS or JS files
+ */
+function hook_metacontent() {
+	$themeFileUri = get_theme_file_uri();
+	$siteManifestUri = $themeFileUri . "/manifest.json";
+	echo '<link rel="manifest" href="' . $siteManifestUri . '">';
+	echo '<meta name="theme-color" content="#ffff9f"/>';
+}
+add_action('wp_head', 'hook_metacontent');

@@ -1,0 +1,10 @@
+{
+    "author": "Asteol, with Puzzlout",
+    "start_url": "./",
+    "default_locale": "en",
+    "name": "Asteol",
+    "short_name": "Asteol",
+    "theme_color": "#ffff9f",
+    "background_color": "#ffff9f",
+    "display": "standalone"
+}

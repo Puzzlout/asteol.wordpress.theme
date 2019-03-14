@@ -1,0 +1,409 @@
+.logged-in .site,
+.logged-in .navigation-top {
+    margin-top: 2em;/*The height of the admin bar*/
+}
+
+/*--------------------------------------------------------------
+5.0 Typography
+--------------------------------------------------------------*/
+p {
+    text-align: justify;
+    color: #171700;
+}
+/*--------------------------------------------------------------
+7.0 Formatting
+--------------------------------------------------------------*/
+body,
+.site-header,
+.site-content-contain,
+.panel-content,
+.site-footer {
+    background-color: #FFFF9F;
+}
+
+a:hover.more-link,
+.link-more a:focus, 
+.link-more a:hover {
+    font-size: larger;
+    color: #ffff00;
+}
+
+.entry-content .more-link:before {
+    display: none;
+}
+a.more-link,
+.link-more a {
+    padding: 1em;
+    background-color: #171700;
+    color: #ffffff;
+}
+/*--------------------------------------------------------------
+13.0 Layout
+--------------------------------------------------------------*/
+.site {
+	height: 100%;
+    grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+	"m m h h h h h h h h h h" 
+	"m m c c c c c c c c c c";
+}
+/*--------------------------------------------------------------
+13.1 Header
+--------------------------------------------------------------*/
+header {
+	grid-area: h;
+}
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+/*--------------------------------------------------------------
+13.3 Regular Content
+--------------------------------------------------------------*/
+.site-content-contain {
+	grid-area: c;
+}
+
+.wp-block-columns {
+    flex-wrap: nowrap;
+}
+
+[class^="wp-block-"]:not(.wp-block-gallery) figcaption {
+    text-align: center;
+}
+/*--------------------------------------------------------------
+12.0 Navigation
+--------------------------------------------------------------*/
+
+.navigation-top {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 0;
+    border-top: 0;
+    display: none;
+    z-index: 3;
+}
+
+.navigation-top,
+.main-navigation .menu {
+    background-color: #171700;
+}
+
+.main-navigation > div,
+.main-navigation li {
+    width: 100%;
+}
+.main-navigation .menu-item > a {
+    color: #FFFF9F;
+}
+.main-navigation .current-menu-item .sub-menu,
+.main-navigation .current-menu-item .sub-menu .menu-item > a {
+    background-color: #171700;
+}
+
+.main-navigation li a:hover,
+.main-navigation li a:focus,
+.sub-menu li a:focus,
+.sub-menu li a:hover {
+    background-color: #FFFF00;
+    color: #171700;
+    font-size: larger;
+}
+.main-navigation a:focus,
+.main-navigation a:hover {
+    color: #171700;
+}
+
+.main-navigation .current-menu-item,
+.main-navigation .sub-menu .current-menu-item,
+.main-navigation .current_page_item {
+    background-color: #FFFF9F;
+}
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_item > a,
+.main-navigation .sub-menu .current-menu-item > a {
+    color: #171700;
+}
+.main-navigation .current-menu-item > a:focus,
+.main-navigation .current_page_item > a:focus,
+.main-navigation .current-menu-item > a:hover,
+.main-navigation .current_page_item > a:hover,
+.main-navigation .sub-menu .current-menu-item > a:focus,
+.main-navigation .sub-menu .current-menu-item > a:hover {
+    color: #171700;
+}
+
+.menu-close {
+    color: #171700;
+    background-color: #FFFF9F;
+}
+
+li.menu-item-has-children {
+}
+
+li.menu-item-has-children::before {
+    border-style: unset !important;
+}
+
+li.menu-item-has-children::after {
+    border-style: unset !important;
+}
+
+.main-navigation ul ul {
+    position: static;
+    border: none;
+    padding-left: 20px;
+    background: transparent;
+}
+
+.main-navigation li li.focus > a,
+.main-navigation li li:focus > a,
+.main-navigation li li:hover > a,
+.main-navigation li li a:hover,
+.main-navigation li li a:focus {
+    color: #171700;
+}
+.main-navigation li li.current_page_item a:hover,
+.main-navigation li li.current-menu-item a:hover,
+.main-navigation li li.current_page_item a:focus,
+.main-navigation li li.current-menu-item a:focus {
+    color: #171700;
+}
+
+.menu-toggle {
+    position: fixed;
+    opacity: 1;
+    background-color: #171700;
+    color: #fff;
+    z-index: 99;
+    border: 1px solid #FFFF00;
+    border-left: none;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.menu-toggle .icon {
+    margin-right: 0.15em;
+}
+
+.menu-close {
+    padding: 1em;
+    margin: 1em;
+    position: relative;
+    float: right;
+    border-radius: 2em;
+    line-height: initial;
+}
+.menu-close:hover {
+    background-color: #FFFF00;
+}
+
+.dropdown-toggle {
+    color: #FFFF9F
+}
+.current-menu-item .dropdown-toggle {
+    color: #171700;
+}
+.main-searchbox {
+    width: 70%;
+}
+/*--------------------------------------------------------------
+13.4 Posts
+--------------------------------------------------------------*/
+
+.page-header span {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.page-search article,
+.page-archive article {
+    background-color: #fbfb74;
+    padding: 2em;
+    margin-bottom: 3em;
+}
+
+/*--------------------------------------------------------------
+15.0 Widgets
+--------------------------------------------------------------*/
+
+.main-searchbox {
+	width: 80vmax;
+	margin: 1em auto;
+}
+.main-searchbox .search-form {
+	display: flex;
+}
+.main-searchbox .search-submit {
+	position: initial;
+}
+
+/*--------------------------------------------------------------
+19.0 Media Queries
+--------------------------------------------------------------*/
+@media (max-width: 20em) {
+
+    .main-searchbox {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .search-field {
+        min-width: 60%;
+    }
+}
+
+@media screen and (min-width: 20em) {
+
+    .site-header + .site-content-contain {
+        padding-top: 12em;
+    }
+    .custom-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+	.main-navigation {
+		display: flex;
+    }
+    
+    .js .menu-toggle {
+        position: absolute;
+        right: 0;
+        margin: 1em;
+    }
+	.searchbox-menu {
+		width: max-content;
+		margin: 0;
+	}
+}
+@media screen and (min-width: 30em) {
+    .site-header + .site-content-contain {
+        padding-top: 10em;
+    }
+    .site-branding {
+        padding: 1em 0;
+    }
+
+    .panel-content .wrap {
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+
+    .panel-content .entry-header {
+        margin-bottom: 2.5em;
+    }
+
+}
+
+@media screen and (max-width: 48em) {
+    body:not(.title-tagline-hidden) .site-branding-text {
+        display: block;
+        text-align: center;
+    }
+    .site-description {
+        display: none;
+    }
+
+    .navigation-top {
+        width: 100%
+    }
+    .main-navigation .menu li {
+        margin: 1em;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: inherit;
+        border: 1px solid #FFFF00;
+        border-radius: 4px;
+    }
+    .wp-block-media-text {
+        display: block;
+    }
+
+    .wp-block-media-text .wp-block-media-text__content {
+        padding: 1.5em 0 0 0;
+    }
+}
+
+@media screen and ( min-width: 48em ) {
+    .site-header {
+        position: initial;
+        width: initial;
+    }
+
+    .navigation-top nav {
+        margin-left: 0;
+    }
+
+    .main-navigation ul ul a {
+        width: initial;
+    }
+    .site-header + .site-content-contain {
+        padding-top: 0em;
+    }
+    .custom-header {
+        display: initial;
+    }
+    .js .menu-toggle {
+        position: fixed;
+        top: 8.25em;
+        left: 0;
+        margin: initial;
+    }
+    .main-searchbox {
+        width: 50vmax;
+        margin: 1em auto;
+    }
+}
+@media screen and ( min-width: 64em ) {
+    .page-archive .site-main,
+    .page-search .site-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3em;
+    }
+
+    .page-archive,
+    .page-search .site-main {
+        width: initial;
+        max-width: initial;
+    }
+
+    body:not(.has-sidebar):not(.page-one-column) .page-header,
+    .page-search .page-header {
+        display: block;
+        float: initial;
+        width: initial;
+    }
+
+    .page-archive article,
+    .page-search article {
+        margin-bottom: initial;
+    }
+
+}
+
+@media screen and ( min-width: 75em ) {
+	.site {
+	    display: grid;
+	}
+	/* Main Navigation */
+    .navigation-top {
+        display: block;
+        width: 20%;
+        width: 20vw;
+    }
+
+    .menu-close,
+	.js .menu-toggle,
+	.js .dropdown-toggle {
+		display: none;
+	}
+}

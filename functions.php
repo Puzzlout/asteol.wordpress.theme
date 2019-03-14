@@ -457,7 +457,7 @@ function twentyseventeen_scripts() {
 	}
 
 	//Asteol custom styles
-	wp_enqueue_style( 'twentyseventeen-asteol-custom-style', get_theme_file_uri( '/assets/css/asteol.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	wp_enqueue_style( 'twentyseventeen-asteol-custom-style', get_theme_file_uri( '/assets/css/asteol.ec829a3.css' ), array( 'twentyseventeen-style' ), '1.0' );
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
@@ -665,3 +665,14 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Add non CSS or JS files
+ */
+function hook_metacontent() {
+	$themeFileUri = get_theme_file_uri();
+	$siteManifestUri = $themeFileUri . "/manifest.json";
+	echo '<link rel="manifest" href="' . $siteManifestUri . '">';
+	echo '<meta name="theme-color" content="#ffff9f"/>';
+}
+add_action('wp_head', 'hook_metacontent');

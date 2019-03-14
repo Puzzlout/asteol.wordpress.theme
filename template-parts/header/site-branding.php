@@ -36,7 +36,24 @@
 
 	</div><!-- .wrap -->
 </div><!-- .site-branding -->
-<div class="main-searchbox searchbox-standalone">
-	<?php get_search_form(); ?>
-</div>
-
+	<?php if ( has_nav_menu( 'top' ) ) : ?>
+			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">Menu
+				<?php
+				echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
+				//echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+				_e( '', 'twentyseventeen' );
+				?>
+			</button>
+			<div class="navigation-top">
+					<button class="menu-close" aria-controls="top-menu">
+						<?php
+						echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
+						_e( '', 'twentyseventeen' );
+						?>   
+					</button>
+					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+			</div><!-- .navigation-top -->
+	<?php endif; ?>
+	<div class="main-searchbox searchbox-standalone">
+		<?php get_search_form(); ?>
+	</div>

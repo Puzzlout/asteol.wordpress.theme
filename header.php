@@ -17,6 +17,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" content="Asteol, ARTISAN ÉLECTRICIEN, PLOMBIER, CHAUFFAGISTE, au service des autoconstructeurs et particuliers">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
@@ -44,30 +45,6 @@
 		echo '</div><!-- .single-featured-image-header -->';
 	endif;
 	?>
-
-	<?php if ( has_nav_menu( 'top' ) ) : ?>
-		<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-			<?php
-			echo twentyseventeen_get_svg( array( 'icon' => 'bars' ) );
-			//echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
-			_e( '', 'twentyseventeen' );
-			?>
-		</button>
-		<div class="navigation-top">
-			<div class="wrap">
-                <button class="menu-close" aria-controls="top-menu">
-                    <?php
-                    echo twentyseventeen_get_svg( array( 'icon' => 'close' ) );
-                    _e( '', 'twentyseventeen' );
-                    ?>   
-                </button>
-				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-                <div class="main-searchbox searchbox-menu">
-                    <?php get_search_form(); ?>
-                </div>
-			</div><!-- .wrap -->
-		</div><!-- .navigation-top -->
-	<?php endif; ?>
 
 	<div class="site-content-contain">
 		<div id="content" class="site-content">

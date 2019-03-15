@@ -10,6 +10,7 @@ p {
     text-align: justify;
     color: #171700;
 }
+
 /*--------------------------------------------------------------
 7.0 Formatting
 --------------------------------------------------------------*/
@@ -18,7 +19,7 @@ body,
 .site-content-contain,
 .panel-content,
 .site-footer {
-    background-color: #FFFF9F;
+    background-color: #eeeeee;
 }
 
 a:hover.more-link,
@@ -34,7 +35,7 @@ a:hover.more-link,
 a.more-link,
 .link-more a {
     padding: 1em;
-    background-color: #171700;
+    background-color: #1f2cda;
     color: #ffffff;
 }
 /*--------------------------------------------------------------
@@ -46,6 +47,10 @@ a.more-link,
 	grid-template-areas: 
 	"m m h h h h h h h h h h" 
 	"m m c c c c c c c c c c";
+}
+
+.site-branding-text {
+    display: none !important;
 }
 /*--------------------------------------------------------------
 13.1 Header
@@ -91,7 +96,7 @@ header {
 
 .navigation-top,
 .main-navigation .menu {
-    background-color: #171700;
+    background-color: #eaeaea;
 }
 
 .main-navigation > div,
@@ -99,35 +104,35 @@ header {
     width: 100%;
 }
 .main-navigation .menu-item > a {
-    color: #FFFF9F;
+    color: #1f2cda;
 }
 .main-navigation .current-menu-item .sub-menu,
 .main-navigation .current-menu-item .sub-menu .menu-item > a {
-    background-color: #171700;
+    background-color: #eaeaea;
 }
 
 .main-navigation li a:hover,
 .main-navigation li a:focus,
 .sub-menu li a:focus,
 .sub-menu li a:hover {
-    background-color: #FFFF00;
-    color: #171700;
+    background-color: #eeeeee;
+    color: #1f2cda;
     font-size: larger;
 }
 .main-navigation a:focus,
 .main-navigation a:hover {
-    color: #171700;
+    color: #1f2cda;
 }
 
 .main-navigation .current-menu-item,
 .main-navigation .sub-menu .current-menu-item,
 .main-navigation .current_page_item {
-    background-color: #FFFF9F;
+    background-color: #eeeeee;
 }
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a,
 .main-navigation .sub-menu .current-menu-item > a {
-    color: #171700;
+    color: #1f2cda;
 }
 .main-navigation .current-menu-item > a:focus,
 .main-navigation .current_page_item > a:focus,
@@ -135,12 +140,12 @@ header {
 .main-navigation .current_page_item > a:hover,
 .main-navigation .sub-menu .current-menu-item > a:focus,
 .main-navigation .sub-menu .current-menu-item > a:hover {
-    color: #171700;
+    color: #1f2cda;
 }
 
 .menu-close {
-    color: #171700;
-    background-color: #FFFF9F;
+    color: #1f2cda;
+    background-color: #eeeeee;
 }
 
 li.menu-item-has-children {
@@ -165,23 +170,21 @@ li.menu-item-has-children::after {
 .main-navigation li li:focus > a,
 .main-navigation li li:hover > a,
 .main-navigation li li a:hover,
-.main-navigation li li a:focus {
-    color: #171700;
-}
+.main-navigation li li a:focus,
 .main-navigation li li.current_page_item a:hover,
 .main-navigation li li.current-menu-item a:hover,
 .main-navigation li li.current_page_item a:focus,
 .main-navigation li li.current-menu-item a:focus {
-    color: #171700;
+    color: #1f2cda;
 }
 
 .menu-toggle {
     position: fixed;
     opacity: 1;
-    background-color: #171700;
-    color: #fff;
+    background-color: #eaeaea;
+    color: #1f2cda;
     z-index: 99;
-    border: 1px solid #FFFF00;
+    border: 1px solid #2f39d1;
     border-left: none;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
@@ -200,14 +203,14 @@ li.menu-item-has-children::after {
     line-height: initial;
 }
 .menu-close:hover {
-    background-color: #FFFF00;
+    background-color: #2f39d1;
 }
 
 .dropdown-toggle {
-    color: #FFFF9F
+    color: #eaeaea
 }
 .current-menu-item .dropdown-toggle {
-    color: #171700;
+    color: #1f2cda;
 }
 .main-searchbox {
     width: 70%;
@@ -223,9 +226,21 @@ li.menu-item-has-children::after {
 
 .page-search article,
 .page-archive article {
-    background-color: #fbfb74;
+    background-color: #6390c5;
     padding: 2em;
     margin-bottom: 3em;
+}
+.entry-title a {
+    color: #eeeeee;
+}
+/* paragraph must be light */ 
+.page-archive p,
+.page-search p {
+    color: #eeeeee;
+}
+
+.single .byline, .group-blog .byline {    
+    display: none;
 }
 
 /*--------------------------------------------------------------
@@ -320,7 +335,7 @@ li.menu-item-has-children::after {
     .menu-toggle {
         display: block;
         position: inherit;
-        border: 1px solid #FFFF00;
+        border: 1px solid #2f39d1;
         border-radius: 4px;
     }
     .wp-block-media-text {

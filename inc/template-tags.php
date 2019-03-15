@@ -47,6 +47,7 @@ if ( ! function_exists( 'twentyseventeen_time_link' ) ) :
 		);
 
 		// Wrap the time string in a link, and preface it with 'Posted on'.
+		return "";//No date for now.
 		return sprintf(
 			/* translators: %s: post date */
 			__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen' ),
